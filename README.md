@@ -7,7 +7,7 @@
 
 Buhocenter es un nuevo comercio electrónico que permite el pago con criptomonedas. Miles de productos al alcance de un clic, encuentra el producto de tu necesidad en nuestros catálogos, ¿te sientes perdido? No te preocupes, con nuestras categorías podrás encontrar lo que necesites, desde productos de tecnología, hasta productos del hogar.
 
-##Correr el contenedor
+## Correr el contenedor
 
 Primero debe colocarse dentro de la carpeta raiz del proyecto, la cual seria "practica-3",deberia ver algo asi:
 
