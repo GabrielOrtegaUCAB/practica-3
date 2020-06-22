@@ -1,5 +1,18 @@
 version: '3'
 services:
+  buhocenter-postgres:
+    image: "postgres:9.6-alpine"
+    container_name: buhocenter-postgres
+    volumes:
+      - buhocenter-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    environment:
+        POSTGRES_DB: buhocenter
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: 1234
+        POSTGRES_HOST_AUTH_METHOD: "trust"
+
   buhocenter-backend:
     build: ./buhocenter-backend
     expose:
@@ -7,7 +20,7 @@ services:
     environment:
         API_PREFIX: '/api/v1'
         TYPEORM_CONNECTION: 'postgres'
-        TYPEORM_HOST: localhost
+        TYPEORM_HOST: buhocenter-postgres
         TYPEORM_PORT: '5432'
         TYPEORM_USERNAME: postgres
         TYPEORM_PASSWORD: 1234
@@ -28,9 +41,11 @@ services:
         JWT_EXPIRES_IN: '12h'
         SMARTSTREET_AUTH_KEY: 018e48c3-9ab3-4ea4-1f51-62a3c351c9a5
         SMARTSTREET_AUTH_TOKEN: rutHqaVC3bklTQiZHWYW
-        DIRECTION_VERIFICATION_URL: https://us-street.api.smartystreets.com/street-address
+        DIRECTION_VERIFICATION_URL: https://us-street.api.smartystreets.com/street-address      
     ports:
       - 3000:3080
+    links:
+      - buhocenter-postgres
     volumes:
       - ./buhocenter-backend/src
     command: npm run start
@@ -57,3 +72,6 @@ services:
     links:
       - buhocenter-backend
     command: npm run serve
+
+volumes:
+  buhocenter-data:
