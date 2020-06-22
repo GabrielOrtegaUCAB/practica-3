@@ -22,7 +22,7 @@ $ docker-compose up -d --force-recreate
  
  ![image](https://user-images.githubusercontent.com/44983658/85345045-61c0cd00-b4bf-11ea-847e-62e64d8bdbac.png)
  
- despues ya podra ver buhocenter en [aca](http://localhost:8081/home) en el puerto 8081, pero aun faltan los inserts, los inserts deben ingresarse manualmente por medio de la consola....
+una vez listo, ya podra ver buhocenter [aca](http://localhost:8081/home) en el puerto 8081, pero aun faltan los inserts, los inserts deben ingresarse manualmente por medio de la consola....
 
 ---------------------------
 ## MIT © 
