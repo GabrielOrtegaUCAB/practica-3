@@ -5,6 +5,8 @@ services:
     container_name: buhocenter-postgres
     volumes:
       - buhocenter-data:/var/lib/postgresql/data
+    expose:
+      - 5432
     ports:
       - 5432:5432
     environment:
@@ -12,6 +14,7 @@ services:
         POSTGRES_USER: postgres
         POSTGRES_PASSWORD: 1234
         POSTGRES_HOST_AUTH_METHOD: "trust"
+
 
   buhocenter-backend:
     build: ./buhocenter-backend
