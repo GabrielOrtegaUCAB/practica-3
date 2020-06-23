@@ -28,7 +28,28 @@ $  docker-compose up --build
 
  ![image](https://user-images.githubusercontent.com/44983658/85345045-61c0cd00-b4bf-11ea-847e-62e64d8bdbac.png)
  
-una vez listo, ya podra ver buhocenter [aca](http://localhost:8081/home) en el puerto 8081, pero aun faltan los inserts, los inserts deben ingresarse manualmente por medio de la consola....
+una vez listo, ya podra ver buhocenter [aca](http://localhost:8081/home) en el puerto 8081
+
+## Inserts a la BD
+
+ aun faltan los inserts,ejecutaremos el siguiente comando:
+ 
+   ```bash
+$  docker cp ./inserts.sql buhocenter-postgres:/docker-entrypoint-initdb.d/dump.sql
+```
+
+y luego :
+
+   ```bash
+$  docker exec -u postgres buhocenter-postgres psql buhocenter postgres -f docker-entrypoint-initdb.d/dump.sql
+```
+y deberiamos ver algo como esto, donde se ve que ya se estan ejecutando los inserts:
+
+![image](https://user-images.githubusercontent.com/44983658/85357463-5d0c1100-b4df-11ea-944c-9aa050f70604.png)
+
+y listo, ya tendremos los inserts en la BD y podremos disfrutar de buhocenter [aca](http://localhost:8081/home) !
+
+(en http://localhost:8081/home )
 
 ---------------------------
 ## MIT © 
