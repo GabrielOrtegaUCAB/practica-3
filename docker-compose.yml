@@ -46,7 +46,7 @@ services:
         SMARTSTREET_AUTH_TOKEN: rutHqaVC3bklTQiZHWYW
         DIRECTION_VERIFICATION_URL: https://us-street.api.smartystreets.com/street-address      
     ports:
-      - 3000:3080
+      - 3000:3000
     links:
       - buhocenter-postgres
     volumes:
@@ -56,7 +56,7 @@ services:
   buhocenter-frontend:
     build: ./buhocenter-frontend
     environment:
-      VUE_APP_BUHOCENTER_API_UR: http://localhost:3000
+      VUE_APP_BUHOCENTER_API_URL: http://localhost:3000
       VUE_APP_BUHOCENTER_API_PREFI: /api/v1
       VUE_APP_BUHOCENTER_FIREBASE_API_KE: AIzaSyDAF-RBZ8PwnxOaYIaPV4s9Z7eqVPOFyNM
       VUE_APP_BUHOCENTER_FIREBASE_AUTH_DOMAI: buhocenter.firebaseapp.com
