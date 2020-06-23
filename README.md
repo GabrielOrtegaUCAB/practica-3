@@ -1,7 +1,9 @@
 # Buhocenter - Dockerizado ![npm](https://img.shields.io/badge/node-v8.12.0-green) ![npm](https://img.shields.io/badge/vue-2.6.11-red) ![npm](https://img.shields.io/badge/version-1.0-blue) ![npm](https://img.shields.io/badge/postgresql-v.11or12-blue) ![npm](https://img.shields.io/badge/docker-blue)
 
 ![Logo-completo](https://user-images.githubusercontent.com/44983658/82739421-64d46c00-9d0d-11ea-87ea-c8c1d27f2a21.png)
-## Fase 1
+## Actividad 3 - integrantes
+ ## Angel sucasas
+ ## Gabriel Ortega
 
 ## Find everything, buy anything
 
