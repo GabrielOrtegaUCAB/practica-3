@@ -22,14 +22,16 @@ $ docker-compose up -d --force-recreate
 ```
  esto puede tardar un poco (en nuestro caso tardaba aproximadamente 50 min o 1 hora), en caso de una conexion lenta , docker le mostrara este mensaje:
  
+  ![image](https://user-images.githubusercontent.com/44983658/85345045-61c0cd00-b4bf-11ea-847e-62e64d8bdbac.png)
+ 
+ 
  si el comando anterior no le hace el build , tendra que ejecutar el siguiente comando:
  
   ```bash
 $  docker-compose up --build
 ```
 
- ![image](https://user-images.githubusercontent.com/44983658/85345045-61c0cd00-b4bf-11ea-847e-62e64d8bdbac.png)
- 
+
 una vez listo, ya podra ver buhocenter [aca](http://localhost:8081/home) en el puerto 8081
 
 ## Inserts a la BD
